@@ -1,0 +1,29 @@
+1. Conceido de lado do cliente e lado do servidor
+
+2. O que é o pre-processamento do PHP?
+
+3. O que caralho é um build, como funciona e qual se fluxo?
+
+4. Como funciona o Xampp e como ele torna minha máquina um servidor?
+
+5. O que é o localhost
+
+6. Qual a diferença entre single e double quote?
+
+7. Qual o operador de concatenação?
+
+8. É possivel exibir uma constante por interpolação com aspas?
+
+9. E como funciona para exibir o resultado de funções em echo?
+
+10. O que é sequencia de escape e explique o \n, \t, \"
+
+11. O que são variaveis superglobais?
+
+12. O que é o operador de coalescência nula?
+
+13. Qual a ordem de precedência?
+
+14. Como usar as funçoes e a biblioteca intl?
+
+15. Com constatntes eu tenho necessariamente que usar interpolação?

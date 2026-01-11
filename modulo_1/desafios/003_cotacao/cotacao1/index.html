@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conversor de moedas - Desafio 03</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Digite o valor que deseja converter!</h1>
+    </header>
+    <section>
+        <p>Digite o valor em reais (R$) que deseja converter para dólar (US$)</p>
+        <form action="num.php" method="get" aria-labelledby="form">
+            <label for="Valor">Valor</label>
+            <input type="number" name="valor" id="valor" step="any">
+
+            <label for="data">Selecione a data da cotação</label>
+            <input type="date" name="data" id="data">
+        
+            <input type="submit" value="Converter">
+        </form>
+    </section>
+</body>
+</html>

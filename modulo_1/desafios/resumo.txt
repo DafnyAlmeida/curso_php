@@ -1,0 +1,4 @@
+
+
+8. caixa eletronico, digito quando quero sacar e ele me passa a quantidade de cada nota sem nota de dois
+

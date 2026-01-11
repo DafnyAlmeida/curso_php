@@ -1,0 +1,6 @@
+estudar mais a fundo as carecteristicas dos tipos primitivos compostos e especiais e as carecteristicas do bool
+
+
+orientação a objetos/ diferença entre objeto e array e seus metodos
+
+estudar banco de dados e APIs

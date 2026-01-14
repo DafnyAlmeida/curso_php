@@ -10,7 +10,7 @@
     <?php 
     $num = $_GET["num"] ?? 0;
     $raiz_quadra = sqrt($num);
-    $raiz_cubica = $num**1/3;
+    $raiz_cubica = $num**(1/3);
     
     ?>
     <header>
@@ -19,7 +19,7 @@
     <main>
         <form action="<?= $_SERVER["PHP_SELF"] ?>">
             <label for="num">Número:</label>
-            <input type="number" name="num" id="num" step="any">
+            <input type="number" name="num" id="num" step="any" value="<?= $num ?>">
 
             <input type="submit" value="Enviar">
         </form>

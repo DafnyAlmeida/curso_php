@@ -19,13 +19,13 @@
     <main>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="preco">Preço:</label>
-            <input type="number" name="preco" id="preco">
+            <input type="number" name="preco" id="preco" value="<?= $preco ?? 0 ?>">
 
             <label for="aumen">
                 Reajuste:
-                <span id="valorRange"><?= $aumento ?></span>
+                <span id="valorRange">0%</span>
             </label>
-            <input type="range" id="aumen" name="aumen" min="0" max="100" value="<?= $aumento ?? 0 ?>" oninput="valorRange.innerText = this.value + '%'">
+            <input type="range" id="aumen" name="aumen" min="0" max="100" step="1" value="<?= $aumento ?? 0 ?>" oninput="mudaValor()">
 
             <input type="submit" value="Calcular">
         </form>
@@ -35,5 +35,10 @@
         echo "<p>O preço de " . numfmt_format_currency($padrao, $preco, "BRL") . " com o reajuste de $aumento% fica <strong>" . numfmt_format_currency($padrao, $resul, "BRL") . "</strong></p>";
         ?>
     </section>
+    <script>
+        function mudaValor() {
+            valorRange.innerText = aumen.value + "%";
+        };
+    </script>
 </body>
 </html>

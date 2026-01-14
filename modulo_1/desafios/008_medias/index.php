@@ -8,13 +8,13 @@
 </head>
 <body>
     <?php 
-    $v1 = (float) $_GET["v1"] ?? 0;
-    $peso1 = (float) $_GET["peso1"] ?? 1;
-    $v2 = (float) $_GET["v2"] ?? 0;
-    $peso2 = (float) $_GET["peso2"] ?? 1;
+    $v1 = $_GET["v1"] ?? '';
+    $peso1 = $_GET["peso1"] ?? '';
+    $v2 = $_GET["v2"] ?? '';
+    $peso2 = $_GET["peso2"] ?? '';
 
     $media_ari = ($v1 + $v2) / 2;
-    $media_pon = ($v1 * $peso1 + $v2 * $peso2) / $peso1 + $peso2;
+    $media_pon = ($v1 * $peso1 + $v2 * $peso2) / ($peso1 + $peso2);
 
     ?>
     <header>
@@ -23,16 +23,16 @@
     <main>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="v1">Valor 1</label>
-            <input type="number" name="v1" id="v1" step="any">
+            <input type="number" name="v1" id="v1" step="any" value="<?= $v1 ?>" required>
 
             <label for="peso1">Peso 1</label>
-            <input type="number" name="peso1" id="peso1" step="any" value="1">
+            <input type="number" name="peso1" id="peso1" step="any" value="1" value="<?= $peso1 ?>" required min="1">
 
             <label for="v2">Valor 2</label>
-            <input type="number" name="v2" id="v2" step="any">
+            <input type="number" name="v2" id="v2" step="any" value="<?= $v2 ?>" required>
 
             <label for="peso2">Peso 2</label>
-            <input type="number" name="peso2" id="peso2" step="any" value="1">
+            <input type="number" name="peso2" id="peso2" step="any" value="<?= $peso2 ?>" required min="1">
 
             <input type="submit" value="Calcular">
 

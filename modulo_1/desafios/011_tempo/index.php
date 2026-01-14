@@ -10,14 +10,16 @@
 
 <body>
     <?php
-    $segundos = (float) $_GET["segundos"] ?? 0;
+    $segundos = $_GET["segundos"] ?? 0;
     $minutos = intdiv($segundos, 60);
     $horas = intdiv($minutos, 60);
     $dias = intdiv($horas, 24);
+    $semanas = intdiv($dias, 7);
 
     $sobra_segun = $segundos - $minutos * 60;
     $minutos = $minutos - $horas * 60;
     $horas = $horas - $dias * 24;
+    $dias %= 7;
     ?>
     <header>
         <h1>Convertor de tempo</h1>
@@ -36,6 +38,7 @@
             <?php
             echo "<p>O resultado obtido a partir da conversão de " . number_format($segundos, 2, ",", ".") . " minutos foi:</p>";
             echo "<ul>
+            <li>" . number_format($semanas, 2, ",", ".") . " semanas</li>
             <li>" . number_format($dias, 2, ",", ".") . " dias</li>
             <li>" . number_format($horas, 2, ",", ".") . " horas</li>
             <li>" . number_format($minutos, 2, ",", ".") . " minutos</li>

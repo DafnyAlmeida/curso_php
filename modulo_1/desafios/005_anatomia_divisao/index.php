@@ -63,7 +63,7 @@
             <input type="number" name="dividendo" id="dividendo" step="any">
 
             <label for="divisor">Divisor:</label>
-            <input type="number" name="divisor" id="divisor" step="any">
+            <input type="number" name="divisor" id="divisor" step="any" min="1">
 
             <input type="submit" value="Calcular">
         </form>

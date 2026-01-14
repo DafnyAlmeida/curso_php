@@ -10,8 +10,12 @@
     <?php 
     $sala_user = $_GET["sala"] ?? 0;
     $resul = intdiv($sala_user, 1621);
-    $sobra = $sala_user - (1621 * $resul);
+    $sobra = $sala_user % 1621;
     $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+
+    /* Ou
+    $sobra = $sala_user - (1621 * $resul);
+    */
     ?>
     <header>
         <h1>Digite seu salário</h1>
@@ -27,7 +31,7 @@
     <section>
         <h2>Resultado</h2>
         <?php 
-        echo "<p>O seu salário de " . numfmt_format_currency($padrao, $sala_user, "BRL") . " equivale a " . number_format($resul, 2, ",", ".") . " <strong>salários minimos*</strong> e " . numfmt_format_currency($padrao, $sobra, "BRL") . " reais</p>";
+        echo "<p>O seu salário de <strong>" . numfmt_format_currency($padrao, $sala_user, "BRL") . "</strong> equivale a " . number_format($resul, 2, ",", ".") . " <strong>salários minimos*</strong> e " . numfmt_format_currency($padrao, $sobra, "BRL") . " reais</p>";
 
         echo "<p>*O salário minimo equivale a R$ 1.621,00</p>";
         

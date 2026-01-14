@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php 
-    $nasci = (int) $_GET["nasci"] ?? 0;
-    $ano = (int) $_GET["ano"] ?? date("Y");
+    $nasci = $_GET["nasci"] ?? 0;
+    $ano = $_GET["ano"] ?? date("Y");
     $resul = $ano - $nasci;
     ?>
 
@@ -19,10 +19,10 @@
     <main>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="nasci">Ano de nascimento:</label>
-            <input type="number" name="nasci" id="nasci" value="<?= $nasci ?>">
+            <input type="number" name="nasci" id="nasci" value="<?= $nasci ?>" max="<?= date('Y') ?>">
 
             <label for="ano">Ano em que quer saber sua idade:</label>
-            <input type="number" name="ano" id="ano" value="<?= date('Y')?>">
+            <input type="number" name="ano" id="ano" value="<?= $ano ?>">
 
             <input type="submit" value="Calcular">
         </form>

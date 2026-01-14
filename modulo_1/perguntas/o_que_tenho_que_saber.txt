@@ -27,3 +27,5 @@
 14. Como usar as funçoes e a biblioteca intl?
 
 15. Com constatntes eu tenho necessariamente que usar interpolação?
+
+16. O que faz o alt + shifth + seta para baixo

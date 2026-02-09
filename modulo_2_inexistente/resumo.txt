@@ -1,0 +1,99 @@
+
+1️⃣ FASE 1 — FUNDAMENTOS DO PHP (Básico)
+
+1. O que é PHP, servidor e requisição HTTP
+
+2. Sintaxe básica
+    - variáveis
+    - tipos
+    - operadores
+    - concatenar strings
+    - valor absoluto, módulo etc.
+
+3. Estruturas de controle
+    - if/else
+    - switch
+    - loops (for, while, foreach)
+
+4. Funções
+
+5. Escopo
+
+6. Arrays (simples, associativos, multidimensionais)
+
+7. Superglobais essenciais
+    - $_GET, $_POST, $_SERVER, $_SESSION, $_COOKIE, $_FILES
+
+8. Trabalhar com formulários HTML
+
+9. Sanitização e validação de dados (iniciante)
+
+## 🧪 Projetos práticos:
+
+- 🔹 **Calculadora em PHP** (com HTML)
+- 🔹 **Formulário que envia e exibe dados usando GET/POST**
+- 🔹 **Mini sistema de login falso (sem banco)**
+- 🔹 **Gerador de frases, senhas ou números aleatórios**
+
+---
+
+2️⃣ FASE 2 — PHP PARA WEB (Intermediário Início)
+
+## 📘 Aprender:
+
+1. Incluindo arquivos
+    - `include`, `require`, `require_once`
+
+2. Manipulação de arquivos
+    - ler / escrever `.txt`, `.json`
+
+3. Cookies e sessões
+    
+4. Funções nativas importantes
+    - manipulação de strings
+    - manipulação de números
+    - funções matemáticas
+
+5. Tratamento de erros e exceções
+
+6. Princípios básicos de segurança
+    - XSS
+    - CSRF
+    - SQL Injection
+
+## 🧪 Projetos práticos:
+
+- 🔹 **Sistema de login e logout com SESSION**
+- 🔹 **Contador de visitas com cookies**
+- 🔹 **Bloco de notas online (salvando em .txt)**
+- 🔹 **Mini painel administrativo com níveis de acesso**
+
+---
+
+# **3️⃣ FASE 3 — BANCO DE DADOS + PHP (Intermediário Sério)**
+
+## 📘 Aprender:
+
+1. MySQL / MariaDB
+
+2. CRUD completo
+
+3. PDO (esqueça `mysqli`)
+    - prepared statements
+    - tratamento de exceções
+
+4. Relacionamentos
+
+5. Normalização de dados
+
+6. Padrões de estrutura de pastas
+
+## 🧪 Projetos práticos OBRIGATÓRIOS:
+
+- 🔹 **CRUD de Usuários**
+- 🔹 **CRUD de Produtos**
+- 🔹 **Sistema de posts estilo blog**
+- 🔹 Sistema de comentários
+- 🔹 Agenda de contatos com busca e filtro
+
+Aqui você já começa a poder dizer que **sabe programar PHP funcionalmente.

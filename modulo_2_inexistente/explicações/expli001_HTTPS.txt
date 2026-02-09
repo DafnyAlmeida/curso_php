@@ -1,0 +1,56 @@
+A web funciona em arquitetura cliente/servidor: o navegador (cliente) envia requisições HTTP a um servidor web, e o servidor responde a esses pedidos. 
+
+Um formulário HTML (<form>) é a forma amigável de montar uma requisição HTTP para enviar dados ao servidor. Ele possui dois atributos principais: action, que indica o destino (URL ou arquivo PHP) para onde os dados vão, e method, que define o método HTTP usado (GET ou POST).
+
+O atributo action faz com que, ao submeter o formulário, o navegador envie uma requisição HTTP para o arquivo que o action indica no servidor.
+
+O atributo method indica como os dados são enviados:
+- GET: coloca os dados na URL (query string).
+- POST: envia os dados no corpo da requisição HTTP, não aparecendo na URL, e suporta muito mais informação. 
+
+O servidor web (por exemplo Apache ou Nginx com PHP instalado) recebe essa requisição HTTP e identifica, pelo atributo action, qual script PHP deve ser executado. Em nosso exemplo, o servidor carrega e executa o arquivo processa.php. A essa altura, o PHP já coletou automaticamente os dados enviados no formulário.
+
+## SOBRE O PROTOCOLO HTTPS
+
+A principal diferença entre HTTP e HTTPS é o uso de criptografia. 
+- Com HTTPS, os dados enviados entre o navegador e o servidor são criptografados usando um protocolo TLS (Transport Layer Security) ou o antigo SSL. A criptografia embaralha as informações, tornando-as ilegíveis para qualquer pessoa que tente interceptar os dados no meio do caminho, como hackers. Assim, mesmo que alguém consiga acessar os dados, eles não conseguirão decifrá-los sem a chave correta.
+
+- O HTTP é o protocolo padrão para a comunicação entre navegadores e servidores web, ele não criptografa os dados, deixando-os vulneráveis a ataques, como a interceptação de informações. Isso significa que, ao usar HTTP, qualquer dado transmitido pode ser acessado por terceiros, incluindo senhas e dados bancários.
+
+### COMO FUNCIONA O HTTPS
+
+O HTTPS usa um protocolo de criptografia para criptografar as comunicações. O protocolo é chamado de Transport Layer Security (TLS). 
+Esse protocolo protege as comunicações usando o que é conhecido como infraestrutura de chave pública assimétrica. Este tipo de sistema de segurança usa duas chaves diferentes para criptografar as comunicações entre duas partes:
+
+- A chave privada - esta chave é controlada pelo proprietário de um site e é mantida, como o leitor pode imaginar, privada. Essa chave reside em um servidor web e é usada para descriptografar informações criptografadas pela chave pública.
+
+- A chave pública - esta chave está disponível para todos que desejam interagir com o servidor de forma segura. As informações criptografadas pela chave pública só podem ser descriptografadas pela chave privada.
+
+Quando um usuário se conecta a uma página web, a página web envia seu certificado SSL que contém a chave pública necessária para iniciar a sessão segura. Os dois computadores, o cliente e o servidor, passam por um processo chamado handshake SSL/TLS, que é uma série de comunicações de ida e volta usadas para estabelecer uma conexão segura, é basicamente iniciar uma sessão criptografada, além de verificam se um determinado servidor é quem diz ser.
+
+
+## O QUE É UM IP
+IP (Internet Protocol) é basicamente o endereço de um dispositivo na rede. Assim como cada casa tem um endereço, o IP é o endereço dos seus dispositivos na internet. Dessa forma ao solicitar dados de um servidor ele sabe para quem enviar esses dados (para determinado IP/endereço).
+
+### TIPOS DE IP
+- IP Público
+É o "endereço" da sua internet para o mundo externo.
+ A internet toda enxerga
+ Seu provedor (Vivo, Claro, Oi…) te fornece
+ Pode mudar (IP dinâmico) ou ser fixo (IP estático)
+
+- IP Local (ou privado)
+É o IP dentro da sua rede doméstica (sua casa).
+Seu roteador distribui IPs privados para todos os seus dispositivos conectados a internet
+
+
+### EXEMPLO 
+Quando você pede algo da internet:
+1. Você envia o pedido para o servidor (ex: YouTube).
+2. O servidor vê seu IP público e devolve o vídeo para esse endereço.
+3. Seu roteador vê quem dentro da casa pediu aquilo (com IP local).
+4. E entrega para o dispositivo certo.
+
+# PORTAS EM UM COMPUTADOR
+Se você conecta seu computador à internet, vários programas usam a rede ao mesmo tempo: Navegador (Chrome, Firefox), WhatsApp Web, Jogos online, Servidor web (se você estiver rodando um) etc.
+Todos eles usam o mesmo IP, então é necessário ter um “número” que indica qual programa deve receber certos pacotes de dados de um servidor. Esse número é a porta.
